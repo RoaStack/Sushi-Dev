@@ -1,0 +1,274 @@
+html, body {
+    background-image: url('../imagenes/fondo-red.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fdd835;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.redes {
+    margin: 10px 0;
+}
+
+.icono {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 35%;
+    transition: transform 0.3s;
+}
+
+.facebook {
+    background-image: url('../imagenes/fbb.png');
+}
+
+.instagram {
+    background-image: url('../imagenes/ig.png');
+}
+
+.twitter {
+    background-image: url('../imagenes/tw.png');
+}
+
+.icono:hover {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .contacto-info {
+        padding: 100px 20px;
+    }
+
+    .info-box h1 {
+        font-size: 2em;
+    }
+}
+
+
+.logo {
+    display: flex;          
+    align-items: center;    
+    gap: 10px;             
+    font-size: 24px;       
+    font-weight: bold;      
+    color: white;          
+}
+
+.logo-img {
+    height: 50px;          
+    width: auto;           
+}
+
+
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: rgba(26, 26, 26, 0.9);
+    border-top: 5px solid #E31937;
+    box-shadow: 0 0 20px rgba(227, 25, 55, 0.5);
+    border-radius: 8px;
+    margin-top: 200px;
+}
+
+.sushi-form-title {
+    color: #E31937;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sushi-form-group {
+    margin-bottom: 25px;
+}
+
+.sushi-form-groupp label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.sushi-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.sushi-form-group input,
+.sushi-form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(51, 51, 51, 0.7);
+    border: 1px solid #444;
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.sushi-form-groupp input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(51, 51, 51, 0.7);
+    border: 1px solid #444;
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    padding-bottom: 5rem;
+}
+
+
+.sushi-form-group input:focus{
+    outline: none;
+    border-color: #E31937;
+    box-shadow: 0 0 8px rgba(227, 25, 55, 0.4);
+}
+.sushi-form-groupp input:focus{
+    outline: none;
+    border-color: #E31937;
+    box-shadow: 0 0 8px rgba(227, 25, 55, 0.4);
+}
+
+.sushi-submit-btn {
+    background-color: #E31937;
+    color: #FFF;
+    border: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sushi-submit-btn:hover {
+    background-color: #C0102C;
+    transform: translateY(-2px);
+}
+
+.sushi-decoration {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+}
+
+
+
+.logo-img {
+    height: 150px;          
+    width: auto;
+    border-radius: 60%;
+    border-color: #ffde59;
+    border-style: solid;
+    border-width: 5px;
+           
+}
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 480px) {
+  .formulario {
+    padding: 20px;
+    width: 100%;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formulario {
+    width: 90%;
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+  }
+}

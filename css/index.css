@@ -1,0 +1,299 @@
+/* Body general */
+body {
+  background-image: url('../imagenes/fondo-red.png');
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fdd835;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 5% 60px;
+  min-height: 100vh;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-img img {
+  width:100%;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+.hero-texto {
+  max-width: 500px;
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero-texto h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitulo-menu {
+  font-size: 1.2em;
+  color: #ffde59;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.boton-ver {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #c1001f;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton-ver:hover {
+  background-color: #ffe082;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-texto h2 {
+    font-size: 2.2em;
+  }
+
+  .boton-ver {
+    margin-top: 20px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.redes {
+  margin: 10px 0;
+}
+
+.icono {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 35%;
+  transition: transform 0.3s;
+}
+
+.facebook {
+  background-image: url('../imagenes/fbb.png');
+}
+
+.instagram {
+  background-image: url('../imagenes/ig.png');
+}
+
+.twitter {
+  background-image: url('../imagenes/tw.png');
+}
+
+.icono:hover {
+  transform: scale(1.2);
+}
+
+.logo {
+    display: flex;          
+    align-items: center;    
+    gap: 10px;             
+    font-size: 24px;       
+    font-weight: bold;      
+    color: white;          
+}
+
+.logo-img {
+    height: 150px;          
+    width: auto;
+    border-radius: 60%;
+    border-color: #ffde59;
+    border-style: solid;
+    border-width: 5px;
+           
+}
+/* Mini Galería Automática */
+.mini-galeria {
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed; /* o 'absolute' dependiendo de tu layout */
+  left: 20px; /* Ajusta este valor para acercarlo más o menos al borde */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centrado vertical */
+}
+
+.galeria-automatica {
+  display: flex;
+  height: 100px;
+  animation: cambio-imagenes 9s infinite;
+}
+
+.galeria-automatica img {
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.galeria-proximamente {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes cambio-imagenes {
+  0%, 30% { transform: translateX(0); }
+  35%, 65% { transform: translateX(-100%); }
+  70%, 100% { transform: translateX(-200%); }
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+}
+
+/* Tablets (481px a 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Escritorios medianos (769px a 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    padding: 40px;
+  }
+}

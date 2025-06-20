@@ -1,0 +1,230 @@
+body {
+  background-image: url('../imagenes/fondo-red.png');
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-attachment: fixed;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}/* Estilo general de las secciones */
+.promociones, .promociones2, .promociones3 {
+    padding: 2rem;
+    text-align: center;
+    background-color: #e8c8551a;
+    margin: 5rem;
+    margin-top: 13rem;
+}
+
+/* Título */
+.promociones h2, .promociones2 h2, .promociones3 h2 {
+    font-size: 2rem;
+    color: rgb(250, 234, 234);
+    font-family: 'East Sea Dokdo', cursive;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Card */
+.card {
+    display: inline-block;
+    width: 250px;
+    margin: 1rem;
+    background-color: #f5e1ce;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    vertical-align: top;
+    text-align: center;
+    height: 24rem;
+}
+
+/* Imagen */
+.card img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+}
+
+/* Texto */
+.card p {
+    font-size: 1.1rem;
+    color: #283747;
+    margin: 0.5rem 0;
+    height: 2.5rem;
+    padding-bottom: 2rem;
+
+}
+
+/* Botón Pedir */
+.btn-pedir {
+    background-color: #e8c855;
+    color: #283747;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    font-family: 'East Sea Dokdo', cursive;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 3.5rem;
+}
+
+.btn-pedir:hover {
+    background-color: #d4b12f;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fdd835;
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  flex: 1;
+}
+
+
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+}
+
+/* Íconos */
+.redes {
+  margin: 10px 0;
+}
+
+.icono {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 35%;
+  transition: transform 0.3s;
+}
+
+.facebook {
+  background-image: url('../imagenes/fbb.png');
+}
+
+.instagram {
+  background-image: url('../imagenes/ig.png');
+}
+
+.twitter {
+  background-image: url('../imagenes/tw.png');
+}
+
+.icono:hover {
+  transform: scale(1.2);
+}
+
+
+.logo {
+    display: flex;          
+    align-items: center;    
+    gap: 10px;             
+    font-size: 24px;       
+    font-weight: bold;     
+    color: white;          
+}
+
+.logo-img {
+    height: 150px;          
+    width: auto;
+    border-radius: 60%;
+    border-color: #ffde59;
+    border-style: solid;
+    border-width: 5px;
+           
+}
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 480px) {
+  .promociones-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .promo-card {
+    width: 100%;
+  }
+
+  .promo-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .promo-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .promociones-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo-card {
+    width: 100%;
+  }
+}
