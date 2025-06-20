@@ -14,7 +14,7 @@ Este proyecto nos permitió practicar y aplicar:
 
 ## 👥 Colaboradores
 
-- Gustavo @HttpResponsive
+- Gustavo @HTTPResponseG
 - Cristóbal @peluca912 
 - Diego @RoaStack
 
